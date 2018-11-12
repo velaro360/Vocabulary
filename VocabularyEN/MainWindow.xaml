@@ -10,21 +10,21 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="new_english" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="15,36,0,0"/>
-        <TextBox x:Name="new_polish" HorizontalAlignment="Left" Height="23" Margin="15,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="new_english_l" Content="Wprowadź nowe słowo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
-        <Label x:Name="new_polish_l" Content="Wprowadź jego tłumaczenie*:" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Height="26" Width="174"/>
-        <Button x:Name="new_words_b" Content="Dodaj" HorizontalAlignment="Left" Margin="15,145,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="new_words_b_Click" KeyDown="translate_tb_KeyDown" Cursor="Hand"/>
-        <Label x:Name="warning1" Content="Wpisz słowa!" HorizontalAlignment="Left" Margin="95,144,0,0" VerticalAlignment="Top" Visibility="Hidden" Background="White" Foreground="Red" RenderTransformOrigin="0.838,-0.922" FontSize="10" Height="24" Width="110"/>
+        <TextBox x:Name="textbox_new_english" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="15,36,0,0"/>
+        <TextBox x:Name="textbox_new_polish" HorizontalAlignment="Left" Height="23" Margin="15,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label_new_english" Content="Wprowadź nowe słowo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <Label x:Name="label_new_polish" Content="Wprowadź jego tłumaczenie*:" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top" Height="26" Width="174"/>
+        <Button x:Name="button_add_words" Content="Dodaj" HorizontalAlignment="Left" Margin="15,145,0,0" VerticalAlignment="Top" Width="75" Height="19" Click="button_add_words_Click" Cursor="Hand"/>
+        <Label x:Name="label_warning_add" Content="Wpisz słowa!" HorizontalAlignment="Left" Margin="95,144,0,0" VerticalAlignment="Top" Visibility="Hidden" Background="White" Foreground="Red" RenderTransformOrigin="0.838,-0.922" FontSize="10" Height="24" Width="110"/>
         <Canvas HorizontalAlignment="Left" Height="190" Margin="217,10,0,0" VerticalAlignment="Top" Width="2" Background="Black"/>
-        <Label x:Name="title_l" Content="Sprawdź swoją wiedzę" HorizontalAlignment="Left" Margin="232,6,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="32" Width="178"/>
-        <Button x:Name="random_b" Content="Losuj słowo" HorizontalAlignment="Left" Margin="237,47,0,0" VerticalAlignment="Top" Width="75" Click="random_b_Click" Height="19" Cursor="Hand"/>
-        <Label x:Name="random_info_l" Content="Wylosowano słowo:" HorizontalAlignment="Left" Margin="237,76,0,0" VerticalAlignment="Top" Height="26" Width="115"/>
-        <Label x:Name="translate_l" Content="Przetłumacz: " HorizontalAlignment="Left" Margin="237,109,0,0" VerticalAlignment="Top" Height="26" Width="80"/>
-        <TextBox x:Name="translate_tb" HorizontalAlignment="Left" Height="23" Margin="322,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" KeyDown="translate_tb_KeyDown"/>
-        <Label x:Name="warning2" Content="Label" HorizontalAlignment="Left" Margin="322,140,0,0" VerticalAlignment="Top" FontSize="9" FontStyle="Italic" Visibility="Hidden" Height="22" Width="127"/>
-        <Button x:Name="help_b" Content="Podpowiedź" HorizontalAlignment="Left" Margin="237,169,0,0" VerticalAlignment="Top" Width="75" Click="help_b_Click" Visibility="Hidden" Height="19" Cursor="Hand"/>
-        <TextBlock x:Name="info" HorizontalAlignment="Left" Margin="15,173,0,0" TextWrapping="Wrap" Text="* Możesz wprowadzić wiele tłumaczeń oddzielając słowa przecinkiem." VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="162" FontSize="9" Height="33">
+        <Label x:Name="label_title" Content="Sprawdź swoją wiedzę" HorizontalAlignment="Left" Margin="232,6,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Height="32" Width="178"/>
+        <Button x:Name="button_random" Content="Losuj słowo" HorizontalAlignment="Left" Margin="237,47,0,0" VerticalAlignment="Top" Width="75" Click="button_random_Click" Height="19" Cursor="Hand"/>
+        <Label x:Name="label_random_info" Content="Wylosowano słowo:" HorizontalAlignment="Left" Margin="237,76,0,0" VerticalAlignment="Top" Height="26" Width="115"/>
+        <Label x:Name="label_translate" Content="Przetłumacz: " HorizontalAlignment="Left" Margin="237,109,0,0" VerticalAlignment="Top" Height="26" Width="80"/>
+        <TextBox x:Name="textbox_translate" HorizontalAlignment="Left" Height="23" Margin="322,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" KeyDown="textbox_translate_KeyDown"/>
+        <Label x:Name="label_warning_translation" Content="Label" HorizontalAlignment="Left" Margin="322,140,0,0" VerticalAlignment="Top" FontSize="9" FontStyle="Italic" Visibility="Hidden" Height="22" Width="127"/>
+        <Button x:Name="button_help" Content="Podpowiedź" HorizontalAlignment="Left" Margin="237,169,0,0" VerticalAlignment="Top" Width="75" Click="help_b_Click" Visibility="Hidden" Height="19" Cursor="Hand"/>
+        <TextBlock x:Name="textblock_info" HorizontalAlignment="Left" Margin="15,173,0,0" TextWrapping="Wrap" Text="* Możesz wprowadzić wiele tłumaczeń oddzielając słowa przecinkiem." VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="162" FontSize="9" Height="33">
             <TextBlock.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -34,7 +34,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <Label x:Name="random_info2_l" Content="" HorizontalAlignment="Left" Margin="347,76,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="help_l" Content="" HorizontalAlignment="Left" Margin="317,166,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.325,0.521" Visibility="Hidden"/>
+        <Label x:Name="label_random_info2" Content="" HorizontalAlignment="Left" Margin="347,76,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_help" Content="" HorizontalAlignment="Left" Margin="317,166,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.325,0.521" Visibility="Hidden"/>
     </Grid>
 </Window>
